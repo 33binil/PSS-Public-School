@@ -8,6 +8,7 @@ import { Navbar } from './components/Navbar.tsx';
 import { Hero } from './components/Hero.tsx';
 import { AboutSection } from './components/AboutSection.tsx';
 import { NewsEventsSection } from './components/NewsEventsSection.tsx';
+import { PrincipalMessageSection } from './components/PrincipalMessageSection.tsx';
 import { Footer } from './components/Footer.tsx';
 import { ComingSoonModal } from './components/ComingSoonModal.tsx';
 import { AdmissionModal } from './components/AdmissionModal.tsx';
@@ -78,6 +79,11 @@ export default function App() {
           onViewAllEvents={() => handleNavigate('School Events Calendar 2024-25')}
           onOpenLiveUpdates={() => setNoticeboardModalOpen(true)}
           onOpenAdmission={() => setAdmissionModalOpen(true)}
+        />
+
+        {/* Principal's Message Section */}
+        <PrincipalMessageSection
+          onExploreSchool={() => handleNavigate('About Our School & History')}
         />
       </main>
 
