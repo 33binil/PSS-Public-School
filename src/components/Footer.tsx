@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             >
               <div className="w-12 h-14 sm:w-14 sm:h-16 flex items-center justify-center shrink-0">
                 <img
-                  src="public/assets/images/pss_logo.jpg"
+                  src="/assets/images/pss_logo.jpg"
                   alt="PSS Emblem"
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

@@ -2,5 +2,7 @@
   "name": "PSS Public School - Panickaveettil Sir Sebastian",
   "description": "Official website of PSS Public School (Panickaveettil Sir Sebastian) - A legacy of learning, academic excellence, and holistic growth.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }

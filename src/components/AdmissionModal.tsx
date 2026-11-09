@@ -52,7 +52,7 @@ export const AdmissionModal: React.FC<AdmissionModalProps> = ({ isOpen, onClose 
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-amber-400/30">
               <img 
-                src="public/assets/images/pss_logo.jpg" 
+                src="/assets/images/pss_logo.jpg" 
                 alt="PSS Emblem" 
                 className="w-full h-full object-contain filter brightness-110" 
                 referrerPolicy="no-referrer"

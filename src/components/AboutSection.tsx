@@ -51,8 +51,30 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore }) => {
               </div>
             </div>
 
+            {/* Principal's Message Spotlight */}
+            <div className="pt-1">
+              <div className="p-3.5 sm:p-4 rounded-2xl bg-amber-50/80 border border-amber-200/70 flex items-center gap-3.5 sm:gap-4 max-w-xl shadow-xs">
+                <div className="w-13 h-13 sm:w-14 sm:h-14 rounded-full overflow-hidden shrink-0 border-2 border-amber-400 shadow-xs bg-white">
+                  <img 
+                    src="/assets/images/principal.jpg" 
+                    alt="Mrs. Diana Jacob - Principal" 
+                    className="w-full h-full object-cover object-top"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-[13px] text-slate-700 italic font-medium leading-snug">
+                    "At PSS, we inspire every student to discover their true potential and lead with integrity and compassion."
+                  </p>
+                  <span className="block text-[11px] font-extrabold text-[#0c3b2e] uppercase tracking-wider mt-1">
+                    Mrs. Diana Jacob — Principal
+                  </span>
+                </div>
+              </div>
+            </div>
+
             {/* Know More Button */}
-            <div className="pt-3">
+            <div className="pt-2">
               <button
                 onClick={onKnowMore}
                 className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#0c3b2e] hover:bg-[#072a21] text-white text-xs sm:text-sm font-bold tracking-wider uppercase rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group hover:-translate-y-0.5 cursor-pointer"

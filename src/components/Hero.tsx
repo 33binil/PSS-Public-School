@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background Campus Photo & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="public/assets/images/school-hero.jpg" 
+          src="/assets/images/school-hero.jpg" 
           alt="PSS Public School Campus Aerial" 
           className="w-full h-full object-cover object-center"
           referrerPolicy="no-referrer"
@@ -128,8 +128,8 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
           </div>
 
-          {/* Right Column: Visual Accolade Cards Filling Blank Space */}
-          <div className="hidden lg:flex lg:col-span-4 flex-col items-end space-y-4 pt-16 pr-2">
+          {/* Right Column: Visual Accolade Cards Filling Space Alongside Hanging Banner */}
+          <div className="hidden lg:flex lg:col-span-4 flex-col items-end space-y-4 pt-16 lg:pt-24 pr-24 xl:pr-32">
             <div className="bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-[0_12px_36px_rgba(12,59,46,0.12)] border border-slate-100 max-w-xs transition-transform hover:-translate-y-1 select-none">
               <div className="flex items-center gap-3 mb-2">
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 text-[#0c3b2e] flex items-center justify-center font-bold">
