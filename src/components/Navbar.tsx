@@ -55,7 +55,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white flex items-center justify-center p-1.5 shadow-sm shrink-0 transition-transform group-hover:scale-105">
               <img 
-                src="/assets/extracted/logo_shield.png" 
+                src="public/assets/images/pss_logo.jpg" 
                 alt="PSS Public School Crest" 
                 className="w-full h-full object-contain"
                 referrerPolicy="no-referrer"

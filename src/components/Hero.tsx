@@ -58,7 +58,7 @@ export const Hero: React.FC<HeroProps> = ({
       {/* Background Campus Photo & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
-          src="src/assets/images/school-hero.jpg" 
+          src="public/assets/images/school-hero.jpg" 
           alt="PSS Public School Campus Aerial" 
           className="w-full h-full object-cover object-center scale-[1.01]"
           referrerPolicy="no-referrer"
