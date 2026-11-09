@@ -128,8 +128,8 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-5 pb-10">
           <div>
             <div className="inline-flex items-center gap-2 mb-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-600 animate-pulse" />
-              <span className="text-xs font-extrabold tracking-[0.2em] uppercase text-emerald-800">
+              <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+              <span className="text-xs font-extrabold tracking-[0.2em] uppercase text-blue-800">
                 NEWS & EVENTS
               </span>
             </div>
@@ -160,7 +160,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
             {eventsList.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-[0_3px_18px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(12,59,46,0.08)] hover:border-emerald-200 transition-all duration-300 flex flex-col group"
+                className="bg-white rounded-2xl overflow-hidden border border-slate-100 shadow-[0_3px_18px_rgba(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgba(11,37,69,0.08)] hover:border-blue-200 transition-all duration-300 flex flex-col group"
               >
                 {/* Event Photo */}
                 <div className="h-48 sm:h-52 lg:h-56 w-full overflow-hidden bg-slate-100 relative">
@@ -183,7 +183,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
                     <span className="text-[11px] sm:text-xs font-bold tracking-wider uppercase text-slate-500">
                       {item.date}
                     </span>
-                    <h3 className="font-serif font-bold text-lg sm:text-xl text-slate-900 group-hover:text-[#0c3b2e] transition-colors leading-snug">
+                    <h3 className="font-serif font-bold text-lg sm:text-xl text-slate-900 group-hover:text-[#0f2b5c] transition-colors leading-snug">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -195,7 +195,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
                   <div className="pt-1">
                     <button
                       onClick={() => onOpenEvent(item.title)}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider uppercase text-slate-900 group-hover:text-[#0c3b2e] transition-colors cursor-pointer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold tracking-wider uppercase text-slate-900 group-hover:text-[#0f2b5c] transition-colors cursor-pointer"
                     >
                       <span>READ MORE</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
@@ -211,9 +211,9 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
             {/* Widget 1: PSS Live Updates Bar */}
             <div
               onClick={onOpenLiveUpdates}
-              className="bg-white p-5 rounded-2xl border border-slate-100 shadow-[0_3px_16px_rgba(0,0,0,0.03)] hover:border-emerald-300 hover:shadow-md transition-all cursor-pointer flex items-center gap-4 group"
+              className="bg-white p-5 rounded-2xl border border-slate-100 shadow-[0_3px_16px_rgba(0,0,0,0.03)] hover:border-blue-300 hover:shadow-md transition-all cursor-pointer flex items-center gap-4 group"
             >
-              <div className="w-12 h-12 rounded-xl bg-emerald-50 text-[#0c3b2e] flex items-center justify-center shrink-0 border border-emerald-100 group-hover:bg-[#0c3b2e] group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-blue-50 text-[#0f2b5c] flex items-center justify-center shrink-0 border border-blue-100 group-hover:bg-[#0f2b5c] group-hover:text-white transition-colors">
                 <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                   <path d="M7 8h10"/>
@@ -222,7 +222,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
                 </svg>
               </div>
               <div className="space-y-0.5">
-                <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0c3b2e] transition-colors">
+                <h4 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0f2b5c] transition-colors">
                   PSS Live Updates
                 </h4>
                 <p className="text-xs text-slate-500 leading-snug">
@@ -285,11 +285,11 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
                       <span
                         className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center text-xs transition-all ${
                           isAug15
-                            ? 'bg-[#0c3b2e] text-white font-bold shadow-xs'
+                            ? 'bg-[#0f2b5c] text-white font-bold shadow-xs'
                             : isSelected
-                            ? 'bg-amber-100 text-[#0c3b2e] font-bold ring-2 ring-[#0c3b2e]'
+                            ? 'bg-amber-100 text-[#0f2b5c] font-bold ring-2 ring-[#0f2b5c]'
                             : hasSpecialEvent
-                            ? 'text-[#0c3b2e] font-bold bg-emerald-50 hover:bg-emerald-100'
+                            ? 'text-[#0f2b5c] font-bold bg-blue-50 hover:bg-blue-100'
                             : 'hover:bg-slate-100 text-slate-700'
                         }`}
                       >
@@ -305,7 +305,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
 
               {/* Selected date quick event banner */}
               {activeDateMessage && (
-                <div className="p-2.5 bg-emerald-50/80 border border-emerald-100 rounded-xl text-xs text-emerald-900 leading-snug animate-fade-in flex items-start gap-2">
+                <div className="p-2.5 bg-blue-50/80 border border-blue-100 rounded-xl text-xs text-blue-900 leading-snug animate-fade-in flex items-start gap-2">
                   <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0 mt-0.5" />
                   <span>{activeDateMessage}</span>
                 </div>
@@ -313,7 +313,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
             </div>
 
             {/* Widget 3: Admissions Enquiry Card */}
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#064233] via-[#094d3c] to-[#043327] text-white p-6 sm:p-7 shadow-xl border border-emerald-800">
+            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#07244d] via-[#0d3b75] to-[#051a3a] text-white p-6 sm:p-7 shadow-xl border border-blue-800">
               {/* Subtle architectural background texture */}
               <div className="absolute -right-6 -bottom-6 w-44 h-44 opacity-20 pointer-events-none">
                 <img 
@@ -325,7 +325,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
               </div>
 
               <div className="relative z-10 space-y-4">
-                <span className="text-xs font-extrabold tracking-[0.2em] uppercase text-emerald-200/90">
+                <span className="text-xs font-extrabold tracking-[0.2em] uppercase text-blue-200/90">
                   ADMISSIONS 2024 – 25
                 </span>
 
@@ -338,7 +338,7 @@ export const NewsEventsSection: React.FC<NewsEventsSectionProps> = ({
                 <div className="pt-1">
                   <button
                     onClick={onOpenAdmission}
-                    className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white text-[#0c3b2e] font-bold text-xs tracking-wider uppercase rounded-full shadow-md hover:bg-amber-50 hover:shadow-lg transition-all group hover:-translate-y-0.5 cursor-pointer"
+                    className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white text-[#0f2b5c] font-bold text-xs tracking-wider uppercase rounded-full shadow-md hover:bg-amber-50 hover:shadow-lg transition-all group hover:-translate-y-0.5 cursor-pointer"
                   >
                     <span>ADMISSION ENQUIRY</span>
                     <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />

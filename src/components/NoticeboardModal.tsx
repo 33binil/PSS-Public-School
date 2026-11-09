@@ -77,20 +77,20 @@ export const NoticeboardModal: React.FC<NoticeboardModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/65 backdrop-blur-sm animate-fade-in">
       <div 
-        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-emerald-900/10 overflow-hidden max-h-[85vh] flex flex-col"
+        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-blue-900/10 overflow-hidden max-h-[85vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#073f30] via-[#0b5440] to-[#073f30] px-6 py-5 text-white flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-amber-400/30">
-              <Bell className="w-5 h-5 text-amber-300 animate-bounce" />
+        <div className="bg-gradient-to-r from-[#07244d] via-[#0f2b5c] to-[#07244d] px-4 sm:px-6 py-4 sm:py-5 text-white flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/10 flex items-center justify-center p-1 sm:p-1.5 border border-amber-400/30 shrink-0">
+              <Bell className="w-4 h-4 sm:w-5 sm:h-5 text-amber-300 animate-bounce" />
             </div>
             <div>
-              <span className="text-[10px] tracking-widest uppercase font-semibold text-amber-300">
+              <span className="text-[9px] sm:text-[10px] tracking-widest uppercase font-semibold text-amber-300 block">
                 Official Circulars & Bulletin
               </span>
-              <h3 className="text-xl font-serif font-bold text-white leading-tight">
+              <h3 className="text-base sm:text-xl font-serif font-bold text-white leading-tight">
                 PSS Live Updates & Notices
               </h3>
             </div>
@@ -118,7 +118,7 @@ export const NoticeboardModal: React.FC<NoticeboardModalProps> = ({
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3 py-1 text-xs font-medium rounded-full transition-all whitespace-nowrap ${
                   selectedCategory === cat
-                    ? 'bg-[#0c4e3d] text-white shadow-sm'
+                    ? 'bg-[#0f2b5c] text-white shadow-sm'
                     : 'bg-white text-slate-600 hover:bg-slate-200/60 border border-slate-200'
                 }`}
               >
@@ -131,8 +131,8 @@ export const NoticeboardModal: React.FC<NoticeboardModalProps> = ({
         {/* Notices list */}
         <div className="p-6 overflow-y-auto space-y-3.5 flex-1">
           {downloadSuccess && (
-            <div className="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-emerald-800 text-xs font-medium flex items-center gap-2 animate-fade-in">
-              <Sparkles className="w-4 h-4 text-emerald-600 shrink-0" />
+            <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-800 text-xs font-medium flex items-center gap-2 animate-fade-in">
+              <Sparkles className="w-4 h-4 text-blue-600 shrink-0" />
               <span>Simulated download started for circular: &quot;{downloadSuccess}&quot;</span>
             </div>
           )}
@@ -140,14 +140,14 @@ export const NoticeboardModal: React.FC<NoticeboardModalProps> = ({
           {filteredNotices.map((notice) => (
             <div
               key={notice.id}
-              className="p-4 rounded-xl border border-slate-200/80 hover:border-emerald-300 hover:bg-emerald-50/20 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
+              className="p-4 rounded-xl border border-slate-200/80 hover:border-blue-300 hover:bg-blue-50/20 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-3 group"
             >
               <div className="space-y-1.5 flex-1">
                 <div className="flex items-center gap-2">
                   <span className={`text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full ${
                     notice.category === 'Academic' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
                     notice.category === 'Event' ? 'bg-amber-50 text-amber-700 border border-amber-200' :
-                    notice.category === 'Admission' ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' :
+                    notice.category === 'Admission' ? 'bg-blue-50 text-blue-700 border border-blue-200' :
                     'bg-slate-100 text-slate-600 border border-slate-200'
                   }`}>
                     {notice.category}
@@ -159,7 +159,7 @@ export const NoticeboardModal: React.FC<NoticeboardModalProps> = ({
                   </span>
 
                   {notice.isNew && (
-                    <span className="text-[10px] font-bold text-red-600 bg-red-50 border border-red-200 px-1.5 py-0.2 rounded uppercase animate-pulse">
+                    <span className="text-[10px] font-extrabold text-amber-900 bg-gradient-to-r from-amber-100 to-yellow-100 border border-amber-300 px-1.5 py-0.5 rounded uppercase shadow-2xs animate-pulse">
                       NEW
                     </span>
                   )}
@@ -167,7 +167,7 @@ export const NoticeboardModal: React.FC<NoticeboardModalProps> = ({
 
                 <h4 
                   onClick={() => onSelectNotice && onSelectNotice(notice.title)}
-                  className="text-sm font-semibold text-slate-800 group-hover:text-[#0c4e3d] cursor-pointer transition-colors leading-snug"
+                  className="text-sm font-semibold text-slate-800 group-hover:text-[#0f2b5c] cursor-pointer transition-colors leading-snug"
                 >
                   {notice.title}
                 </h4>
@@ -178,7 +178,7 @@ export const NoticeboardModal: React.FC<NoticeboardModalProps> = ({
                   type="button"
                   onClick={() => handleDownload(notice.title)}
                   title="Download circular PDF"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#0c4e3d] bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 rounded-lg transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-[#0f2b5c] bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-lg transition-colors"
                 >
                   <Download className="w-3.5 h-3.5" />
                   <span>Circular PDF</span>

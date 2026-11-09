@@ -14,7 +14,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore }) => {
           <div className="lg:col-span-7 space-y-6 sm:space-y-7">
             {/* Tag / Eyebrow */}
             <div className="flex items-center gap-3">
-              <span className="text-xs sm:text-sm font-extrabold tracking-[0.2em] uppercase text-[#0c3b2e]">
+              <span className="text-xs sm:text-sm font-extrabold tracking-[0.2em] uppercase text-[#0f2b5c]">
                 ABOUT OUR SCHOOL
               </span>
               <div className="w-12 h-1 bg-[#d97706] rounded-full" />
@@ -34,19 +34,19 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore }) => {
             {/* Core Pillars Mini List */}
             <div className="pt-1 grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs sm:text-sm text-slate-700 font-medium">
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#0c3b2e] shrink-0" />
-                <span>CBSE Affiliated (Classes Nursery – XII)</span>
+                <CheckCircle2 className="w-4 h-4 text-[#0f2b5c] shrink-0" />
+                <span className="font-semibold text-slate-800">CBSE Affiliated <span className="text-blue-700 font-bold bg-blue-50 px-1.5 py-0.5 rounded text-xs">(Nursery – XII)</span></span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#0c3b2e] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#0f2b5c] shrink-0" />
                 <span>Value-Based Moral & Character Education</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#0c3b2e] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#0f2b5c] shrink-0" />
                 <span>Smart Classrooms & Modern STEM Labs</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#0c3b2e] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#0f2b5c] shrink-0" />
                 <span>Dedicated & Experienced Faculty Team</span>
               </div>
             </div>
@@ -66,7 +66,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore }) => {
                   <p className="text-xs sm:text-[13px] text-slate-700 italic font-medium leading-snug">
                     "At PSS, we inspire every student to discover their true potential and lead with integrity and compassion."
                   </p>
-                  <span className="block text-[11px] font-extrabold text-[#0c3b2e] uppercase tracking-wider mt-1">
+                  <span className="block text-[11px] font-extrabold text-[#0f2b5c] uppercase tracking-wider mt-1">
                     Mrs. Diana Jacob — Principal
                   </span>
                 </div>
@@ -77,7 +77,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore }) => {
             <div className="pt-2">
               <button
                 onClick={onKnowMore}
-                className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#0c3b2e] hover:bg-[#072a21] text-white text-xs sm:text-sm font-bold tracking-wider uppercase rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group hover:-translate-y-0.5 cursor-pointer"
+                className="inline-flex items-center gap-3 px-6 py-3.5 bg-[#0f2b5c] hover:bg-[#071a38] text-white text-xs sm:text-sm font-bold tracking-wider uppercase rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group hover:-translate-y-0.5 cursor-pointer"
               >
                 <span>KNOW MORE ABOUT PSS</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
@@ -99,11 +99,11 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onKnowMore }) => {
               </div>
 
               {/* Decorative Subtle Shadow Backing */}
-              <div className="absolute -inset-2.5 bg-emerald-900/10 rounded-[38px] -z-0 transform rotate-2" />
+              <div className="absolute -inset-2.5 bg-blue-900/10 rounded-[38px] -z-0 transform rotate-2" />
 
               {/* Handwritten Script Badge "Nurturing Brighter Tomorrows" */}
-              <div className="absolute -bottom-5 -right-3 sm:-right-6 lg:-right-8 z-20 bg-white/95 backdrop-blur-sm px-4 py-3 sm:px-5 sm:py-3.5 rounded-2xl shadow-xl border border-emerald-900/15 transform rotate-[-4deg] hover:rotate-0 transition-transform">
-                <div className="font-handwriting text-2xl sm:text-3xl lg:text-[36px] text-[#0c3b2e] font-bold leading-tight select-none">
+              <div className="absolute -bottom-4 sm:-bottom-5 -right-1 sm:-right-6 lg:-right-8 z-20 bg-white/95 backdrop-blur-sm px-3.5 sm:px-5 py-2.5 sm:py-3.5 rounded-2xl shadow-xl border border-blue-900/15 transform rotate-[-3deg] sm:rotate-[-4deg] hover:rotate-0 transition-transform">
+                <div className="font-handwriting text-xl sm:text-3xl lg:text-[36px] text-[#0f2b5c] font-bold leading-tight select-none">
                   <p>Nurturing</p>
                   <p>Brighter</p>
                   <p>Tomorrows</p>

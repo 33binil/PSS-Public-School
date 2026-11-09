@@ -51,7 +51,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fbfcfb] text-slate-800 font-sans selection:bg-[#0c3b2e] selection:text-white relative">
+    <div className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-800 font-sans selection:bg-[#0f2b5c] selection:text-white relative">
       {/* Top Navigation */}
       <Navbar
         activeNav={activeNav}

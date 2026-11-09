@@ -65,12 +65,12 @@ export const SearchModal: React.FC<SearchModalProps> = ({
   return (
     <div className="fixed inset-0 z-50 flex items-start justify-center p-4 pt-20 bg-slate-950/65 backdrop-blur-sm animate-fade-in">
       <div 
-        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-emerald-900/10 overflow-hidden"
+        className="relative w-full max-w-2xl bg-white rounded-2xl shadow-2xl border border-blue-900/10 overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Search Input Bar */}
         <div className="p-4 md:p-6 border-b border-slate-200 flex items-center gap-3">
-          <Search className="w-5 h-5 text-emerald-800 shrink-0" />
+          <Search className="w-5 h-5 text-blue-800 shrink-0" />
           <input
             type="text"
             autoFocus
@@ -115,19 +115,19 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                     onClose();
                     onSelectResult(item.title);
                   }}
-                  className="p-3.5 rounded-xl border border-slate-100 hover:border-emerald-300 hover:bg-emerald-50/30 transition-all cursor-pointer flex items-center justify-between gap-3 group"
+                  className="p-3.5 rounded-xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50/30 transition-all cursor-pointer flex items-center justify-between gap-3 group"
                 >
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-emerald-100/60 text-[#0c4e3d] flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-9 h-9 rounded-lg bg-blue-100/60 text-[#0f2b5c] flex items-center justify-center shrink-0 mt-0.5">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-blue-800 bg-blue-50 px-2 py-0.5 rounded">
                           {item.category}
                         </span>
                       </div>
-                      <h4 className="text-sm font-semibold text-slate-800 group-hover:text-[#0c4e3d] transition-colors mt-0.5">
+                      <h4 className="text-sm font-semibold text-slate-800 group-hover:text-[#0f2b5c] transition-colors mt-0.5">
                         {item.title}
                       </h4>
                       <p className="text-xs text-slate-500 line-clamp-1 mt-0.5">
@@ -136,7 +136,7 @@ export const SearchModal: React.FC<SearchModalProps> = ({
                     </div>
                   </div>
 
-                  <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#0c4e3d] group-hover:translate-x-0.5 transition-all shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-slate-300 group-hover:text-[#0f2b5c] group-hover:translate-x-0.5 transition-all shrink-0" />
                 </div>
               );
             })

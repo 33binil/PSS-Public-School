@@ -34,11 +34,11 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/60 backdrop-blur-sm animate-fade-in">
       {/* Modal Container */}
       <div 
-        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-emerald-900/10 overflow-hidden transform transition-all"
+        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl border border-blue-900/10 overflow-hidden transform transition-all"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Top Decorative Header */}
-        <div className="bg-gradient-to-r from-[#073f30] via-[#0c4e3d] to-[#073f30] px-6 py-5 text-white flex items-center justify-between relative">
+        <div className="bg-gradient-to-r from-[#07244d] via-[#0f2b5c] to-[#07244d] px-6 py-5 text-white flex items-center justify-between relative">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-amber-400/30">
               <img 
@@ -70,8 +70,8 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
         {/* Modal Body */}
         <div className="p-6 md:p-8 space-y-6">
           <div className="flex flex-col items-center text-center space-y-3">
-            <div className="w-14 h-14 rounded-2xl bg-emerald-50 text-[#0c4e3d] border border-emerald-100 flex items-center justify-center shadow-inner">
-              <Clock className="w-7 h-7 text-[#0c4e3d] animate-pulse" />
+            <div className="w-14 h-14 rounded-2xl bg-blue-50 text-[#0f2b5c] border border-blue-100 flex items-center justify-center shadow-inner">
+              <Clock className="w-7 h-7 text-[#0f2b5c] animate-pulse" />
             </div>
 
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-amber-50 text-amber-800 border border-amber-200">
@@ -83,15 +83,15 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
               We&apos;re preparing something wonderful!
             </h4>
             <p className="text-sm text-slate-600 max-w-sm leading-relaxed">
-              The <span className="font-semibold text-[#0c4e3d]">{pageTitle}</span> section is currently being updated for the 2024–2025 academic session. Please check back soon or connect with our administrative office.
+              The <span className="font-semibold text-[#0f2b5c]">{pageTitle}</span> section is currently being updated for the 2024–2025 academic session. Please check back soon or connect with our administrative office.
             </p>
           </div>
 
           {/* Quick Notification Box */}
-          <div className="bg-[#f7faf8] border border-emerald-100 rounded-xl p-4">
+          <div className="bg-[#f6f9fc] border border-blue-100 rounded-xl p-4">
             {subscribed ? (
-              <div className="flex items-center justify-center gap-2 text-emerald-800 text-sm font-medium py-1">
-                <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+              <div className="flex items-center justify-center gap-2 text-blue-800 text-sm font-medium py-1">
+                <CheckCircle2 className="w-5 h-5 text-blue-600 shrink-0" />
                 <span>Thank you! We will notify you once this page goes live.</span>
               </div>
             ) : (
@@ -107,11 +107,11 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your email address"
-                    className="flex-1 px-3.5 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0c4e3d] focus:border-transparent"
+                    className="flex-1 px-3.5 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#0f2b5c] focus:border-transparent"
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2 text-sm font-semibold text-white bg-[#0c4e3d] hover:bg-[#08362a] rounded-lg transition-colors shrink-0 shadow-sm"
+                    className="px-4 py-2 text-sm font-semibold text-white bg-[#0f2b5c] hover:bg-[#071a38] rounded-lg transition-colors shrink-0 shadow-sm"
                   >
                     Notify Me
                   </button>
@@ -125,16 +125,16 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
             <div className="flex items-center gap-4">
               <a 
                 href="tel:04782822610" 
-                className="inline-flex items-center gap-1.5 text-slate-700 hover:text-[#0c4e3d] transition-colors"
+                className="inline-flex items-center gap-1.5 text-slate-700 hover:text-[#0f2b5c] transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-emerald-700" />
+                <Phone className="w-3.5 h-3.5 text-blue-700" />
                 <span>0478 282 2610</span>
               </a>
               <a 
                 href="mailto:psspublicschool@gmail.com" 
-                className="inline-flex items-center gap-1.5 text-slate-700 hover:text-[#0c4e3d] transition-colors"
+                className="inline-flex items-center gap-1.5 text-slate-700 hover:text-[#0f2b5c] transition-colors"
               >
-                <Mail className="w-3.5 h-3.5 text-emerald-700" />
+                <Mail className="w-3.5 h-3.5 text-blue-700" />
                 <span>psspublicschool@gmail.com</span>
               </a>
             </div>
@@ -146,7 +146,7 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
                   onClose();
                   onOpenAdmission();
                 }}
-                className="inline-flex items-center gap-1 font-semibold text-[#0c4e3d] hover:text-[#08362a] transition-colors"
+                className="inline-flex items-center gap-1 font-semibold text-[#0f2b5c] hover:text-[#071a38] transition-colors"
               >
                 Admission Enquiry
                 <ArrowRight className="w-3.5 h-3.5" />
