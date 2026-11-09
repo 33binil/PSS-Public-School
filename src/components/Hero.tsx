@@ -54,22 +54,22 @@ export const Hero: React.FC<HeroProps> = ({
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f4f7f4] min-h-[calc(100vh-80px)] sm:min-h-[calc(100vh-96px)] flex flex-col justify-between">
+    <section className="relative w-full overflow-hidden bg-[#f4f7f4] min-h-screen flex flex-col justify-between pt-16 sm:pt-20">
       {/* Background Campus Photo & Overlay */}
       <div className="absolute inset-0 z-0">
         <img 
           src="public/assets/images/school-hero.jpg" 
           alt="PSS Public School Campus Aerial" 
-          className="w-full h-full object-cover object-center scale-[1.01]"
+          className="w-full h-full object-cover object-center"
           referrerPolicy="no-referrer"
         />
         {/* Soft white gradient overlay on left for typography readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/30 sm:w-4/5 lg:w-3/5 pointer-events-none" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/20 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/80 via-[45%] to-transparent sm:via-white/75 sm:via-[40%] sm:to-[70%] lg:via-[35%] lg:to-[65%] pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/40 via-transparent to-transparent pointer-events-none" />
       </div>
 
       {/* Hero Content Area - Enhanced Spacing & Scale */}
-      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-14 pb-6 flex-1 flex flex-col justify-center">
+      <div className="relative z-10 w-full max-w-[1720px] mx-auto px-4 sm:px-6 lg:px-8 pt-4 sm:pt-6 lg:pt-8 pb-6 flex-1 flex flex-col justify-center">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           {/* Left Column: Sizable Typography & Slogan */}
@@ -102,7 +102,7 @@ export const Hero: React.FC<HeroProps> = ({
 
             {/* Extended Educational Philosophy Paragraph */}
             <div className="pl-11 max-w-2xl pt-1">
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed font-semibold">
                 At PSS Public School, we believe education is more than academic success. It is about nurturing curiosity, building character and empowering every child to discover their potential. Through a balanced blend of knowledge, values, creativity and real-world experiences, we prepare our students to face the future with confidence.
               </p>
             </div>
@@ -166,9 +166,9 @@ export const Hero: React.FC<HeroProps> = ({
             <div
               key={card.id}
               onClick={() => onExploreFeature(card.title)}
-              className="group bg-white/95 backdrop-blur-md p-5 sm:p-6 rounded-2xl shadow-[0_6px_25px_rgb(0,0,0,0.05)] border border-slate-100 hover:border-amber-300 hover:shadow-[0_12px_32px_rgba(12,59,46,0.12)] transition-all duration-300 cursor-pointer flex items-center gap-4 sm:gap-5 hover:-translate-y-1"
+              className="group bg-white/95 backdrop-blur-md p-5 sm:p-6 rounded-2xl shadow-[0_10px_30px_-5px_rgba(12,59,46,0.14),0_6px_16px_rgba(0,0,0,0.08)] border border-white/80 hover:border-amber-300 hover:shadow-[0_20px_40px_-5px_rgba(12,59,46,0.22),0_10px_20px_rgba(0,0,0,0.1)] transition-all duration-300 cursor-pointer flex items-center gap-4 sm:gap-5 hover:-translate-y-1.5"
             >
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-amber-50/80 border border-amber-200/60 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-amber-100/90 transition-all">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-amber-50/80 border border-amber-200/60 flex items-center justify-center shrink-0 group-hover:scale-105 group-hover:bg-amber-100/90 transition-all shadow-xs">
                 {card.icon}
               </div>
               <div className="space-y-1 min-w-0">
@@ -184,20 +184,20 @@ export const Hero: React.FC<HeroProps> = ({
         </div>
 
         {/* Scroll to Explore Indicator */}
-        <div className="flex flex-col items-center justify-center pt-5 pb-1">
+        <div className="flex flex-col items-center justify-center pt-4 pb-1">
           <button
             onClick={onScrollToAbout}
-            className="group flex flex-col items-center gap-2 text-slate-600 hover:text-[#0c3b2e] transition-colors focus:outline-none cursor-pointer"
+            className="group flex flex-col items-center gap-1.5 px-5 py-2 rounded-full bg-white/85 hover:bg-white backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_28px_rgba(12,59,46,0.18)] border border-white/80 hover:border-amber-300 text-slate-700 hover:text-[#0c3b2e] transition-all duration-300 focus:outline-none cursor-pointer hover:-translate-y-0.5"
           >
-            <div className="w-4 h-7 rounded-full border-2 border-slate-600 group-hover:border-[#0c3b2e] flex items-start justify-center p-1 transition-colors">
+            <div className="w-4 h-6 rounded-full border-2 border-slate-600 group-hover:border-[#0c3b2e] flex items-start justify-center p-1 transition-colors shadow-xs">
               <span className="w-1 h-1.5 bg-slate-600 group-hover:bg-[#0c3b2e] rounded-full animate-bounce" />
             </div>
-            <div className="flex items-center gap-2.5">
-              <span className="w-6 h-0.5 bg-slate-300" />
-              <span className="text-[11px] font-bold tracking-[0.22em] uppercase text-slate-600 group-hover:text-[#0c3b2e]">
+            <div className="flex items-center gap-2">
+              <span className="w-4 h-0.5 bg-slate-300 group-hover:bg-amber-400 transition-colors" />
+              <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.22em] uppercase text-slate-700 group-hover:text-[#0c3b2e] transition-colors">
                 SCROLL TO EXPLORE
               </span>
-              <span className="w-6 h-0.5 bg-slate-300" />
+              <span className="w-4 h-0.5 bg-slate-300 group-hover:bg-amber-400 transition-colors" />
             </div>
           </button>
         </div>

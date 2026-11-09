@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             >
               <div className="w-12 h-14 sm:w-14 sm:h-16 flex items-center justify-center shrink-0">
                 <img
-                  src="/assets/extracted/logo_shield.png"
+                  src="public/assets/images/pss_logo.jpg"
                   alt="PSS Emblem"
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
@@ -149,10 +149,10 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-[#0c3b2e] shrink-0" />
                 <a
-                  href="tel:04782822619"
+                  href="tel:04782822610"
                   className="hover:text-[#0c3b2e] transition-colors font-medium"
                 >
-                  0478 282 2619
+                  0478 282 2610
                 </a>
               </div>
 

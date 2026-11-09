@@ -42,7 +42,7 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-amber-400/30">
               <img 
-                src="/assets/extracted/logo_shield.png" 
+                src="public/assets/images/pss_logo.jpg" 
                 alt="PSS Emblem" 
                 className="w-full h-full object-contain filter brightness-110" 
                 referrerPolicy="no-referrer"
@@ -124,11 +124,11 @@ export const ComingSoonModal: React.FC<ComingSoonModalProps> = ({
           <div className="pt-2 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
             <div className="flex items-center gap-4">
               <a 
-                href="tel:04782822619" 
+                href="tel:04782822610" 
                 className="inline-flex items-center gap-1.5 text-slate-700 hover:text-[#0c4e3d] transition-colors"
               >
                 <Phone className="w-3.5 h-3.5 text-emerald-700" />
-                <span>0478 282 2619</span>
+                <span>0478 282 2610</span>
               </a>
               <a 
                 href="mailto:psspublicschool@gmail.com" 

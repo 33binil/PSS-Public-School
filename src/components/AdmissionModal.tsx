@@ -52,7 +52,7 @@ export const AdmissionModal: React.FC<AdmissionModalProps> = ({ isOpen, onClose 
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5 border border-amber-400/30">
               <img 
-                src="/assets/extracted/logo_shield.png" 
+                src="public/assets/images/pss_logo.jpg" 
                 alt="PSS Emblem" 
                 className="w-full h-full object-contain filter brightness-110" 
                 referrerPolicy="no-referrer"
@@ -108,7 +108,7 @@ export const AdmissionModal: React.FC<AdmissionModalProps> = ({ isOpen, onClose 
                 </div>
                 <div className="flex justify-between items-center text-xs">
                   <span className="text-slate-500">Campus Contact:</span>
-                  <span className="font-medium text-slate-700">0478 282 2619</span>
+                  <span className="font-medium text-slate-700">0478 282 2610</span>
                 </div>
               </div>
 
