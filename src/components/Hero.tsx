@@ -81,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({
             </div>
 
             {/* Main Headline - Fluid scaling for all viewports */}
-            <h1 className="font-serif font-black text-3xl xs:text-4xl sm:text-6xl lg:text-[68px] xl:text-[76px] text-[#0f2b5c] leading-[1.05] tracking-tight drop-shadow-xs">
+            <h1 className="font-serif text-black font-black text-3xl xs:text-4xl sm:text-6xl lg:text-[68px] xl:text-[76px] text-[#0f2b5c] leading-[1.05] tracking-tight drop-shadow-xs">
               PSS PUBLIC <br />
               SCHOOL
             </h1>
