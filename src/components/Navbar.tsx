@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 interface NavbarProps {
@@ -13,6 +13,37 @@ export const Navbar: React.FC<NavbarProps> = ({
   onNavigate,
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [visible, setVisible] = useState(true);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Keep navbar visible if mobile drawer is currently open
+      if (mobileMenuOpen) {
+        setVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      // Always show navbar near the top of the page
+      if (currentScrollY <= 60) {
+        setVisible(true);
+      } else if (currentScrollY > lastScrollY.current + 8) {
+        // Scrolling down -> hide navbar by moving upwards
+        setVisible(false);
+      } else if (currentScrollY < lastScrollY.current - 8) {
+        // Scrolling up -> reveal navbar
+        setVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [mobileMenuOpen]);
 
   const navItems = [
     { label: 'Home', isHome: true },
@@ -42,7 +73,13 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 py-2 sm:py-2.5 px-2.5 sm:px-4 lg:px-6 transition-all pointer-events-none">
+    <header 
+      className={`fixed top-0 left-0 right-0 z-40 py-2 sm:py-2.5 px-2.5 sm:px-4 lg:px-6 pointer-events-none transition-transform duration-300 ease-in-out ${
+        visible 
+          ? 'translate-y-0' 
+          : '-translate-y-28 lg:-translate-y-[380px]'
+      }`}
+    >
       <div className="max-w-[1720px] mx-auto flex items-center justify-between gap-2 sm:gap-3 lg:gap-4">
         
         {/* Floating Dark Capsule Pill Bar - Order: Logo -> Home-Contact -> Admission Enquiry -> Banner */}
